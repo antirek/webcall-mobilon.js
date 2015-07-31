@@ -2,11 +2,13 @@
 
 <script>
 
-var webcall = new Webcall({key: 'yd8p1sk433'});
+var webcall = new Webcall();
 
 webcall.makeOrder({number: '89135292926'})
 .then(function (response) {
 	console.log(response);
+}, function (reason) {
+	console.log(reason);
 });
 	
 </script>

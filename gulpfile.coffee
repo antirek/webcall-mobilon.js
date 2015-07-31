@@ -6,7 +6,7 @@ uglify = require 'gulp-uglify'
 gulp.task 'build', ()->  
   gulp.src [
     './bower_components/fetch/fetch.js',
-    './bower_components/es6-promise/promise.js'
+    './bower_components/promise-polyfill/Promise.js',
     './js/webcall.js']
   .pipe concat 'webcall.js'
   .pipe gulp.dest './dist'
@@ -15,7 +15,7 @@ gulp.task 'build', ()->
 gulp.task 'build-minify', ()->  
   gulp.src [
     './bower_components/fetch/fetch.js',
-    './bower_components/es6-promise/promise.js'
+    './bower_components/promise-polyfill/Promise.js',
     './js/webcall.js']
   .pipe uglify()
   .pipe concat 'webcall.min.js'
