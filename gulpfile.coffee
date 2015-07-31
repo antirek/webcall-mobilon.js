@@ -18,7 +18,7 @@ gulp.task 'build-minify', ()->
     './bower_components/es6-promise/promise.js'
     './js/webcall.js']
   .pipe uglify()
-  .pipe concat 'webcall.js'
+  .pipe concat 'webcall.min.js'
   .pipe gulp.dest './dist'
 
 
