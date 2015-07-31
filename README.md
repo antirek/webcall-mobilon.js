@@ -1,10 +1,9 @@
 # webcall-mobilon.js
 
 
-
 ## Usage
 
-`````
+`````javascript
 
 <script src="dist/webcall.js"></script>
 
@@ -23,3 +22,23 @@ webcall.makeOrder({number: '89135292926'})
 
 
 `````
+
+
+## Development
+
+
+### Prepare
+
+> git clone https://github.com/antirek/webcall-mobilon.js.git 
+
+> cd webcall-mobilon.js
+
+> npm install
+
+> bower install
+
+
+### Build 
+
+> gulp
+
