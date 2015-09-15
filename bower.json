@@ -5,6 +5,7 @@
   "authors": [
     "antirek <serge.dmitriev@gmail.com>"
   ],
+  "main": "js/index.js",
   "license": "MIT",
   "ignore": [
     "**/.*",
