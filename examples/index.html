@@ -4,7 +4,11 @@
 
 var webcall = new Webcall();
 
-webcall.makeOrder({number: '89135292926'})
+webcall.makeOrder({
+	number: '89135292926', 
+	name: 'Vasya Petrov', 
+	message: 'Прошу отправить мне новый прайс. Срочно!'
+})
 .then(function (response) {
 	console.log(response);
 }, function (reason) {
