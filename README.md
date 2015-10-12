@@ -5,7 +5,7 @@
 
 `````javascript
 
-<script src="dist/webcall.js"></script>
+<script src="http://developer.mobilon.ru/webcall-mobilon.js/0.0.1/webcall.js"></script>
 
 <script>
 
