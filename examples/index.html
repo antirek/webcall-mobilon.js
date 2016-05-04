@@ -1,18 +1,38 @@
-<script src="http://developer.mobilon.ru/webcall-mobilon.js/0.0.1/webcall.js"></script>
+<script src="/js/webcall.js"></script>
 
 <script>
 
 var webcall = new Webcall({key: 'yd8p1sk433'});
 
-webcall.makeOrder({
-	number: '89135292926', 
-	name: 'Vasya Petrov', 
-	message: 'Прошу отправить мне новый прайс. Срочно!'
+webcall.getConfig()
+.then(function (config) {
+    console.log(config);
 })
-.then(function (response) {
-	console.log(response);
-}, function (reason) {
-	console.log(reason);
+.catch(function (error) {
+    console.log('error:', error);
 });
-	
+
+
+webcall.makeOrder({
+    number: '89135292926', 
+    name: 'Vasya Petrov', 
+    message: 'Прошу отправить мне новый прайс. Срочно!'
+})
+.then(function (data) {
+    console.log(data);
+})
+.catch(function (error) {
+    console.log('error:', error);
+});
+
+
+webcall.getStatus({
+    callid: "5729bb341f8e6019340291f0",
+})
+.then(function (status) {
+    console.log(status);
+}).catch(function (error) {
+    console.log('error:', error);
+});
+
 </script>

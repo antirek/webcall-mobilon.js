@@ -22,12 +22,18 @@ var Webcall = function (settings) {
         }
     };
 
+    var makeRequest = function (url) {
+        return fetch(url).then(function (response) {
+            return response.json();
+        });
+    };
+
     var makeOrder = function (opts) {
         checkKey();
 
         var url = prepareOrderUrl(opts);
         
-        return fetch(url);
+        return makeRequest(url);
     };
 
     var getConfig = function () {
@@ -36,7 +42,7 @@ var Webcall = function (settings) {
         var subUrl = 'api/config/';
         var url = [baseUrl, subUrl, key].join("");
 
-        return fetch(url);
+        return makeRequest(url);
     };
 
     var getStatus = function (callid) {
@@ -45,7 +51,7 @@ var Webcall = function (settings) {
         var subUrl = 'api/status/';
         var url = [baseUrl, subUrl, callid].join("");
 
-        return fetch(url);
+        return makeRequest(url);
     };
 
     return {
