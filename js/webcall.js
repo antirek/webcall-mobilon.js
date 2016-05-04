@@ -45,11 +45,14 @@ var Webcall = function (settings) {
         return makeRequest(url);
     };
 
-    var getStatus = function (callid) {
+    var getStatus = function (opts) {
+        if (!opts.callid) {
+            return Promise.reject('No callid');
+        }
         checkKey();
 
         var subUrl = 'api/status/';
-        var url = [baseUrl, subUrl, callid].join("");
+        var url = [baseUrl, subUrl, opts.callid].join("");
 
         return makeRequest(url);
     };
