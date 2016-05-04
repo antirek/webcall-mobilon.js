@@ -56,7 +56,7 @@ webcall.getConfig()
 
 #### Config
 
-`````json
+`````javascript
 
 {
   "backgroundColor": "Цвет фона",
