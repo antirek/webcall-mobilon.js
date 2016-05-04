@@ -1,0 +1,38 @@
+<script src="/js/webcall.js"></script>
+
+<script>
+
+var webcall = new Webcall({key: 'yd8p1sk433'});
+
+var timerId;
+
+var checkStatus = function (callid) {
+    webcall.getStatus({
+        callid: callid,
+    })
+    .then(function (status) {
+        console.log(status);
+        
+        // if  ok  clearInterval(timerId);
+    });
+};
+
+
+webcall.makeOrder({
+    number: '89135292926', 
+    name: 'Vasya Petrov', 
+    message: 'Прошу отправить мне новый прайс. Срочно!'
+})
+.then(function (data) {
+    console.log(data);
+    
+    timerId = setInterval(checkStatus, 1000, data.id);
+
+})
+.catch(function (err) {
+    console.log(err);
+});
+
+
+
+</script>
