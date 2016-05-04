@@ -526,7 +526,7 @@ var Webcall = function (settings) {
     var key = options['key'] || null;
     var baseUrl = 'http://call.mobilon.ru/';
 
-    var prepareUrl = function (opts) {
+    var prepareOrderUrl = function (opts) {
         var qs = '';
         for (var prop in opts) {
             if (opts.hasOwnProperty(prop)) {
@@ -537,17 +537,50 @@ var Webcall = function (settings) {
         return [baseUrl, key, '/save?', qs].join("");
     };
 
-    var makeOrder = function (opts) {
-        if (key) {
-            var url = prepareUrl(opts);
-            return fetch(url);
-        } else {
+    var checkKey = function () {
+        if (!key) {
             return Promise.reject('No key');
         }
     };
 
-    return {
-        makeOrder: makeOrder
+    var makeRequest = function (url) {
+        return fetch(url).then(function (response) {
+            return response.json();
+        });
     };
 
+    var makeOrder = function (opts) {
+        checkKey();
+
+        var url = prepareOrderUrl(opts);
+        
+        return makeRequest(url);
+    };
+
+    var getConfig = function () {
+        checkKey();
+
+        var subUrl = 'api/config/';
+        var url = [baseUrl, subUrl, key].join("");
+
+        return makeRequest(url);
+    };
+
+    var getStatus = function (opts) {
+        if (!opts.callid) {
+            return Promise.reject('No callid');
+        }
+        checkKey();
+
+        var subUrl = 'api/status/';
+        var url = [baseUrl, subUrl, opts.callid].join("");
+
+        return makeRequest(url);
+    };
+
+    return {
+        makeOrder: makeOrder,
+        getConfig: getConfig,
+        getStatus: getStatus
+    };
 };

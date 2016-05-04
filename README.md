@@ -5,7 +5,7 @@
 
 `````javascript
 
-<script src="http://developer.mobilon.ru/webcall-mobilon.js/0.0.1/webcall.js"></script>
+<script src="http://developer.mobilon.ru/webcall-mobilon.js/0.0.2/webcall.js"></script>
 
 <script>
 
@@ -107,6 +107,11 @@ webcall.getStatus({
 });
 
 `````
+
+
+## Install
+
+> bower install webcall-mobilon.js  [--allow-root --save]
 
 
 
