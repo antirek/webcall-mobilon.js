@@ -59,6 +59,7 @@ webcall.getConfig()
 `````javascript
 
 {
+  "theme_preset": "dark_purple",   // "light_blue", "light_green", "custom"
   "backgroundColor": "Цвет фона",
   "image": "Ссылка на изображение",
   "helloLettering": "Надпись приветсвия",
