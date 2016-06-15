@@ -1,6 +1,5 @@
 # webcall-mobilon.js
 
-
 ## Usage
 
 `````javascript
@@ -35,7 +34,8 @@ webcall.makeOrder({number: '89135292926'})
 webcall.makeOrder({
 	number: '89135292926'
 	name: 'Василий',
-	message: 'Привет, круто, да?!'
+	message: 'Привет, круто, да?!',
+	numberindex: '68wkxbtszy'
 });
 
 `````
@@ -73,6 +73,11 @@ webcall.getConfig()
     "type": "вид вывода целей select or buttons" 
   },
   "name": "Дополнительное поле имя может быть пустым",
+  "subname": "Дополнительное поле, может быть пустым"
+  "wait_animation": {
+    "type": "counter"   //или "cirlce"
+    "time": "15"
+  },
   "panelCall": {//Настройки выбор вызова
     "tag": {//ярлык
       "enable": "true or false обозначает что включен",
