@@ -1,0 +1,28 @@
+{
+    "backgroundColor": "rgba(0,148,214,1)",
+    "image": "http://call.mobilon.ru/images/55229c02229183a143abd403_logo.png",
+    "helloLettering": "Позвоним вам прямо сейчас",
+    "thankYouLettering": "Сейчас нерабочее время, перезвоним вам скоро",
+    "buttonsColor": "#26a69a",
+    "callTargets": {
+        "enable": false,
+        "targets": [],
+        "type": "buttons"
+    },
+    "name": "Перезвоните мне",
+    "panelCall": {
+        "tag": {
+            "enable": true,
+            "top": "150",
+            "color": "rgba(0,148,214,1)",
+            "title": "Перезвонить Вам?",
+            "titleColor": "rgba(255,255,255,1)"
+        },
+        "button": {
+            "enable": false,
+            "top": "520",
+            "color": "rgba(26, 255, 179, .8)",
+            "right": "120"
+        }
+    }
+}
