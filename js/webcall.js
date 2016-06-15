@@ -3,7 +3,7 @@ var Webcall = function (settings) {
 
     var options = settings || {};
     var key = options['key'] || null;
-    var baseUrl = 'http://call.mobilon.ru/';
+    var baseUrl = options['baseUrl'] || 'http://call.mobilon.ru/';
 
     var prepareOrderUrl = function (opts) {
         var qs = '';
