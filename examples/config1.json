@@ -1,0 +1,37 @@
+{
+    "backgroundColor": "#cd2522",
+    "image": "http://call.mobilon.ru/public/images/atendente.jpg",
+    "helloLettering": "Позвоним вам прямо сейчас",
+    "thankYouLettering": "Сейчас нерабочее время, перезвоним вам скоро",
+    "buttonsColor": "#26a69a",
+    "callTargets": {
+        "enable": true,
+        "targets": [
+            {
+                "index": "68wkxbtszy",
+                "title": "Отдел продаж Сибирь"
+            },
+            {
+                "index": "73cdzi8an3",
+                "title": "Отдел продаж Центральный округ"
+            }
+        ],
+        "type": "buttons"
+    },
+    "name": "Мобилон Телекоммуникации",
+    "panelCall": {
+        "tag": {
+            "enable": true,
+            "top": "200",
+            "color": "#cd2522",
+            "title": "Заказать звонок",
+            "titleColor": "white"
+        },
+        "button": {
+            "enable": false,
+            "top": "500",
+            "color": "rgba(26, 255, 179, .8)",
+            "right": "150"
+        }
+    }
+}
