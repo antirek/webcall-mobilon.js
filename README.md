@@ -60,7 +60,7 @@ webcall.getConfig()
 
 {
   "theme_preset": "dark_purple",   // "light_blue", "light_green", "custom"
-  "3dtransform": true,   //  поворот страницы сайта
+  "perspective_page": true,   //  поворот страницы сайта
   "backgroundColor": "Цвет фона",
   "image": "Ссылка на изображение",
   "helloLettering": "Надпись приветсвия",
