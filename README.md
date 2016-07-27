@@ -66,13 +66,16 @@ webcall.getConfig()
   "helloLettering": "Надпись приветсвия",
   "thankYouLettering": "Надпись благодарности",
   "buttonsColor": "Цвет кнопок",
-  "callTargets": {//список целей
-    "enable": "true or false обозначает что включен",
-    "targets": [{
-        "index": "Индекс цели",
-        "title": "Названи цели" 
-    }],
-    "type": "вид вывода целей select or buttons" 
+  "formFields": {  // список полей для отображения на форме
+    "name": true,  // false
+    "phone": true, // false
+    "targets": {
+        "type": "select"  // buttons
+    	"values": [{
+            "index": "Индекс цели",
+            "title": "Названи цели" 
+       }]
+    }
   },
   "name": "Дополнительное поле имя может быть пустым",
   "subname": "Дополнительное поле, может быть пустым"
